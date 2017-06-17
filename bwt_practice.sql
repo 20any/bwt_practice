@@ -1,52 +1,79 @@
-/*
-SQLyog Ultimate v8.32 
-MySQL - 5.5.41-log : Database - bwt_practice
-*********************************************************************
-*/
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.6
+-- http://www.phpmyadmin.net
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Июн 17 2017 г., 09:45
+-- Версия сервера: 5.6.22-log
+-- Версия PHP: 5.6.3
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-/*!40101 SET SQL_MODE=''*/;
+--
+-- База данных: `bwt_practice`
+--
 
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`bwt_practice` /*!40100 DEFAULT CHARACTER SET utf8 */;
+-- --------------------------------------------------------
 
-USE `bwt_practice`;
+--
+-- Структура таблицы `comments`
+--
 
-/*Table structure for table `page1` */
-
-DROP TABLE IF EXISTS `page1`;
-
-CREATE TABLE `page1` (
-  `root` char(1) DEFAULT NULL,
-  `password` int(11) DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usersName` varchar(30) NOT NULL,
+  `usersMind` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-/*Data for the table `page1` */
+-- --------------------------------------------------------
 
-/*Table structure for table `page4` */
+--
+-- Структура таблицы `FeedbackTable`
+--
 
-DROP TABLE IF EXISTS `page4`;
-
-CREATE TABLE `page4` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `root` char(1) DEFAULT NULL,
-  `feedback` char(1) DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS `FeedbackTable` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `surname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `feedback` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-/*Data for the table `page4` */
+-- --------------------------------------------------------
 
-/*Table structure for table `weather` */
+--
+-- Структура таблицы `Users`
+--
 
-DROP TABLE IF EXISTS `weather`;
+CREATE TABLE IF NOT EXISTS `Users` (
+  `id_user` int(15) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(30) NOT NULL,
+  `Surname` varchar(30) NOT NULL,
+  `Pathronic` varchar(30) NOT NULL,
+  `usersLogin` varchar(30) NOT NULL,
+  `usersPass` varchar(30) NOT NULL,
+  `Sex` varchar(30) NOT NULL,
+  `BirthDate` date NOT NULL,
+  `email` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-CREATE TABLE `weather` (
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `weather`
+--
+
+CREATE TABLE IF NOT EXISTS `weather` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` date DEFAULT NULL,
   `hour` datetime DEFAULT NULL,
@@ -59,11 +86,8 @@ CREATE TABLE `weather` (
   `comfort` char(1) DEFAULT NULL,
   `last_update` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-/*Data for the table `weather` */
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

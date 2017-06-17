@@ -1,104 +1,81 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Форма регистрации</title>
-  <link rel="stylesheet" href="/feedback/css/bootstrap.min.css">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.myMenuLi{
+			position: relative;
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+		}
+		.myMenuLi a{
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			color: #ffffff;
+			font-size: 16pt;
+		}
+		.myMenuLi a:hover{
+			text-decoration: none;
+			color: black;
+			font-size: 16pt;
+		}
+	</style>
+	<title>My Main page</title>
 </head>
 <body>
-<h2>Регистрация</h2>
-<form class="form-horizontal">
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="lastName">Фамилия:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="firstName">Имя:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" id="firstName" placeholder="Введите имя">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="fatherName">Отчество:</label>
-    <div class="col-xs-9">
-      <input type="text" class="form-control" id="fatherName" placeholder="Введите отчество">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3">Дата рождения:</label>
-    <div class="col-xs-3">
-      <select class="form-control">
-        <option>Дата</option>
-      </select>
-    </div>
-    <div class="col-xs-3">
-      <select class="form-control">
-        <option>Месяц</option>
-      </select>
-    </div>
-    <div class="col-xs-3">
-      <select class="form-control">
-        <option>Год</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="inputEmail">Email:</label>
-    <div class="col-xs-9">
-      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="inputPassword">Пароль:</label>
-    <div class="col-xs-9">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="confirmPassword">Подтвердите пароль:</label>
-    <div class="col-xs-9">
-      <input type="password" class="form-control" id="confirmPassword" placeholder="Введите пароль ещё раз">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="phoneNumber">Телефон:</label>
-    <div class="col-xs-9">
-      <input type="tel" class="form-control" id="phoneNumber" placeholder="Введите номер телефона">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3" for="postalAddress">Адрес:</label>
-    <div class="col-xs-9">
-      <textarea rows="3" class="form-control" id="postalAddress" placeholder="Введите адрес"></textarea>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-xs-3">Пол:</label>
-    <div class="col-xs-2">
-      <label class="radio-inline">
-        <input type="radio" name="genderRadios" value="male"> Мужской
-      </label>
-    </div>
-    <div class="col-xs-2">
-      <label class="radio-inline">
-        <input type="radio" name="genderRadios" value="female"> Женский
-      </label>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-xs-offset-3 col-xs-9">
-      <label class="checkbox-inline">
-        <input type="checkbox" value="agree">  Я согласен с <a href="#">условиями</a>.
-      </label>
-    </div>
-  </div>
-  <br />
-  <div class="form-group">
-    <div class="col-xs-offset-3 col-xs-9">
-      <input type="submit" class="btn btn-primary" value="Регистрация">
-      <input type="reset" class="btn btn-default" value="Очистить форму">
-    </div>
-  </div>
-</form>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<?php
+		$menu = array(
+			'index.php' => '<span class = "glyphicon glyphicon-home"></span>',
+			'?mod=auth' => 'Auth',
+			'?mod=weatherForecast' => 'weather',
+			'?mod=comments' => 'comments'
+		);
+	?>
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  	<div class="container-fluid">
+	    	<?php 
+	    		foreach ($menu as $k => $v) {
+					echo "<li class = 'myMenuLi'><a href = '".$k."'>".$v."</a></li>".PHP_EOL;
+				}
+			?>	
+	    </div>
+	</nav>
+	<?
+		switch ($_GET['mod']) {
+			case 'index':
+				include "index.php";
+				break;
+			case 'auth':
+				include($_SERVER['DOCUMENT_ROOT']."/pages/auth/authView.php");
+				break;
+			case 'weatherForecast':
+				include($_SERVER['DOCUMENT_ROOT']."/pages/weatherForecast/weatherForecastView.php");
+				break;
+			case 'reg':
+				include($_SERVER['DOCUMENT_ROOT']."/pages/reg/regView.php");
+				break;
+			case 'comments':
+				include($_SERVER['DOCUMENT_ROOT']."/pages/comments/commentsView.php");
+			default:
+				echo "";
+				break;
+		}
+    ?>
+</body>
+</html>
