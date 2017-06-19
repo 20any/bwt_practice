@@ -22,13 +22,24 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-				<form method="post" action="commentsModel.php">
+				<form method="post" action="pages/comments/commentsModel.php">
 					<span>Your name</span>
 					<input type="text" name="usersName" class="form-control">
 					<span>Your mind</span>
 					<textarea name="usersMind" class="form-control"></textarea><br>
 					<button type="submit" class="form-control">Ответить</button>
 				</form>
+				<?php
+					$host = '127.0.0.1';
+					$user = 'root';
+					$password = '';
+					mysql_connect($host,$user,$password);
+					mysql_select_db("bwt_practice");
+					$result = mysql_query("select * from comments order by id DESC");
+					while ($row=mysql_fetch_array($result)){
+						echo "<b>".$row['usersName']."</b>"."<br>".$row['usersMind']."<br>";
+					}
+				?>
 			</div>
 		</div>
 	</div>

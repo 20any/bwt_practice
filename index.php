@@ -44,7 +44,8 @@
 			'index.php' => '<span class = "glyphicon glyphicon-home"></span>',
 			'?mod=auth' => 'Auth',
 			'?mod=weatherForecast' => 'weather',
-			'?mod=comments' => 'comments'
+			'?mod=comments' => 'comments',
+			'?mod=comments' =>'feedback'
 		);
 	?>
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -72,6 +73,9 @@
 				break;
 			case 'comments':
 				include($_SERVER['DOCUMENT_ROOT']."/pages/comments/commentsView.php");
+				break;
+				case 'feedback':
+				include($_SERVER['DOCUMENT_ROOT']."/FeedBack/FeedbackView.php");
 			default:
 				echo "";
 				break;
