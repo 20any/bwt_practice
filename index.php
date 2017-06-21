@@ -9,29 +9,10 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
 	<!-- Latest compiled and minified JavaScript -->
+	<link rel="stylesheet" href="style/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<style type="text/css">
-		.myMenuLi{
-			position: relative;
-			display: inline-block;
-			width: 100px;
-			height: 100px;
-			line-height: 100px;
-		}
-		.myMenuLi a{
-			width: 100%;
-			height: 100%;
-			text-decoration: none;
-			color: #ffffff;
-			font-size: 16pt;
-		}
-		.myMenuLi a:hover{
-			text-decoration: none;
-			color: black;
-			font-size: 16pt;
-		}
-	</style>
+	
 	<title>My Main page</title>
 </head>
 <body>
@@ -45,7 +26,7 @@
 			'?mod=auth' => 'Auth',
 			'?mod=weatherForecast' => 'weather',
 			'?mod=comments' => 'comments',
-			'?mod=comments' =>'feedback'
+			'?mod=Feedback' => 'feedback'
 		);
 	?>
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -74,12 +55,14 @@
 			case 'comments':
 				include($_SERVER['DOCUMENT_ROOT']."/pages/comments/commentsView.php");
 				break;
-				case 'feedback':
+			case 'Feedback':
 				include($_SERVER['DOCUMENT_ROOT']."/FeedBack/FeedbackView.php");
+				break;
 			default:
 				echo "";
 				break;
 		}
+		echo $_SESSION['my'];
     ?>
 </body>
 </html>

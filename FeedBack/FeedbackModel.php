@@ -1,3 +1,13 @@
+<html>
+<head>
+	<style>
+		.send{
+			position:relative;
+			top: 50vh;
+		}
+	</style>
+</head>
+<body>
 <?php
 	$host = '127.0.0.1';
 	$user = 'root';
@@ -16,6 +26,8 @@
 	if (!$result){
 		echo "что-то пошло не так";
 	} else{
-		echo "инфа в бд";
+		echo "<center><h1 class='send'>отправлено</h1></center>";
 	}
 ?>
+</body>
+</html>

@@ -13,7 +13,7 @@
 				<label><span class="glyphicon glyphicon-user"></span>Пароль</label>
 				<input class="form-control" type="password" name="usersPass">
 				<label>Пол</label>
-				<select class="form-control">
+				<select class="form-control" name="usersSex">
 					<option>Муж</option>
 					<option>Жен</option>
 				</select>

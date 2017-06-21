@@ -1,0 +1,29 @@
+body{
+	background: url(../img/background.jpg) no-repeat;
+}
+table{
+	background-color: white;
+}
+.myMenuLi{
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+}
+.myMenuLi a{
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16pt;
+}
+.myMenuLi a:hover{
+	text-decoration: none;
+	color: black;
+	font-size: 16pt;
+}
+span{
+	color: white;
+	font-family: 'Hind', sans-serif;
+}

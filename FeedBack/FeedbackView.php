@@ -7,10 +7,14 @@
 	<title>Форма отзывов</title>
 	<link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+	<style>
+		
+	</style>
 </head>
 <body>
 	<div class="container">
-		<form method="post" action="FeedbackModel.php">
+		<form method="post" action="FeedBack/FeedbackModel.php">
 			<span>Имя</span><br>
 			<span class="glyphicon glyphicon-user"></span><br>
 			<input type="text" name="userName" class="form-control"><br>
